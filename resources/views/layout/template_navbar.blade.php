@@ -1,0 +1,26 @@
+<div class="navbar navbar-fixed-top" >
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <i class="icon-reorder shaded"></i></a>
+                <div style="display: flex">
+                <img  src="{{ asset('images/logo.png') }}" width="110px" height="100px" style ="margin: 10px ">
+                <a class="brand" href="{{ URL::route('home') }}" style="color:#fff;margin-top :10px">CHARUSAT</a>
+            
+            <div class="nav-collapse collapse navbar-inverse-collapse" style="display:flex; margin-left:63%">
+                <ul class="nav pull-right">
+                    <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="{{ asset('images/passport-size.png') }}" class="nav-avatar" />{{ auth()->user()->username }}
+                        <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" target="_blank">Profile</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{{ URL::route('account-sign-out') }}">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+         </div>
+        </div>
+    </div>
+</div>
